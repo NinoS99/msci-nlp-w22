@@ -15,6 +15,13 @@ import sys
 import nltk
 import numpy
 
+<<<<<<< HEAD
+=======
+#posReviews = input("Please enter the file path to the Positive Reviews:")
+#negReviews = input("Please enter the file path to the Negative Reviews:")
+#outputFolder = input("Please enter the folder path of where you want to store the output:")
+
+>>>>>>> 134d28445730b2d7dfecf3eca07c20010d84c7cc
 print(sys.argv)
 outputFolder = sys.argv[1]
 posReviews = outputFolder + '\posReviews.txt'
@@ -74,18 +81,33 @@ open(outputFolder + "/test.csv",'w') as testCSV:
     testSet = (800000 * 0.10) + validationSet
 
     if counter <= trainingSet:
+<<<<<<< HEAD
         print(tokens, end='\n', file=trainCSV) 
         print(filteredWords, end='\n', file=train_nsCSV) 
+=======
+        print(tokens, end='\n', file=trainCSV) #print to train.csv
+        print(filteredWords, end='\n', file=train_nsCSV) #print to trai_ns.csv
+>>>>>>> 134d28445730b2d7dfecf3eca07c20010d84c7cc
         counter = counter + 1
        
 
     elif counter > trainingSet and counter <= validationSet:
+<<<<<<< HEAD
         print(tokens, end='\n', file=valCSV) 
         print(filteredWords, end='\n', file=val_nsCSV)
+=======
+        print(tokens, end='\n', file=valCSV) #print to val.csv
+        print(filteredWords, end='\n', file=val_nsCSV) #print to val_ns.csv
+>>>>>>> 134d28445730b2d7dfecf3eca07c20010d84c7cc
         counter = counter + 1
         
 
     else: 
+<<<<<<< HEAD
         print(tokens, end='\n', file=testCSV)
         print(filteredWords, end='\n', file=test_nsCSV)
+=======
+        print(tokens, end='\n', file=testCSV) #print to test.csv
+        print(filteredWords, end='\n', file=test_nsCSV) #print to test_ns.csv
+>>>>>>> 134d28445730b2d7dfecf3eca07c20010d84c7cc
         counter = counter + 1
